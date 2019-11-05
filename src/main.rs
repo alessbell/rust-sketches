@@ -25,7 +25,7 @@ use fart::shape;
 
 fn main() {
     fart::generate(|cfg| {
-        let mut scene = Scene::new(Aabb::new(point2(0, 0), point2(500, 1000)));
+        let mut scene = Scene::new(Aabb::new(point2(0, 0), point2(1000, 1000)));
 
         let x_dist = Uniform::new(0, 1000);
         let y_dist = Uniform::new(0, 1000);
