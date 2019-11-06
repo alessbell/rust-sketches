@@ -48,7 +48,8 @@ fn main() {
                 //     // b: 3, 4,
                 // });
                 scene.add(shape::Triangle {
-                    a: point2(u as i64, v as i64),
+                    // a: point2(u as i64, v as i64),
+                    a: point2(x_dist.sample(cfg.rng()), y_dist.sample(cfg.rng())),
                     b: point2(x_dist.sample(cfg.rng()), y_dist.sample(cfg.rng())),
                     c: point2(x_dist.sample(cfg.rng()), y_dist.sample(cfg.rng())),
                 });
