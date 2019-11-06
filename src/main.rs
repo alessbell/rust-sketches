@@ -23,7 +23,7 @@
 use fart::prelude::*;
 use fart::shape;
 use fart::fart_2d_geom;
-use fart::euclid;
+// use fart::euclid;
 
 fn main() {
     fart::generate(|cfg| {
@@ -48,7 +48,7 @@ fn main() {
                 //     // b: 3, 4,
                 // });
                 scene.add(shape::Triangle {
-                    a: point2(x_dist.sample(cfg.rng()), y_dist.sample(cfg.rng())),
+                    a: point2(0, 0),
                     b: point2(x_dist.sample(cfg.rng()), y_dist.sample(cfg.rng())),
                     c: point2(x_dist.sample(cfg.rng()), y_dist.sample(cfg.rng())),
                 });
