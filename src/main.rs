@@ -30,12 +30,14 @@ fn main() {
         let x_dist = Uniform::new(0, 1000);
         let y_dist = Uniform::new(0, 1000);
 
-        scene.add(shape::Triangle {
-            a: point2(x_dist.sample(cfg.rng()), y_dist.sample(cfg.rng())),
-            b: point2(x_dist.sample(cfg.rng()), y_dist.sample(cfg.rng())),
-            c: point2(x_dist.sample(cfg.rng()), y_dist.sample(cfg.rng())),
-        });
+        // scene.add(shape::Triangle {
+        //     a: point2(x_dist.sample(cfg.rng()), y_dist.sample(cfg.rng())),
+        //     b: point2(x_dist.sample(cfg.rng()), y_dist.sample(cfg.rng())),
+        //     c: point2(x_dist.sample(cfg.rng()), y_dist.sample(cfg.rng())),
+        // });
 
-        Ok(scene.create_svg(Inches(7.0), Inches(7.0)))
+
+
+        Ok(scene.create_svg(Inches(10.0), Inches(10.0)))
     });
 }
