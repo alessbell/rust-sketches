@@ -32,8 +32,8 @@ fn main() {
 
 
         for x in 0..10 {
-    println!("{}", x); // x: i32
-}
+        println!("{}", x); // x: i32
+        }
 
         // scene.add(shape::Triangle {
         //     a: point2(x_dist.sample(cfg.rng()), y_dist.sample(cfg.rng())),
