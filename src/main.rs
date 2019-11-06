@@ -30,6 +30,11 @@ fn main() {
         let x_dist = Uniform::new(0, 1000);
         let y_dist = Uniform::new(0, 1000);
 
+
+        for x in 0..10 {
+    println!("{}", x); // x: i32
+}
+
         // scene.add(shape::Triangle {
         //     a: point2(x_dist.sample(cfg.rng()), y_dist.sample(cfg.rng())),
         //     b: point2(x_dist.sample(cfg.rng()), y_dist.sample(cfg.rng())),
