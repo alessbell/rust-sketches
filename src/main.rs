@@ -32,7 +32,7 @@ fn main() {
         let x_dist = Uniform::new(0, 1000);
         let y_dist = Uniform::new(0, 1000);
 
-        let count = 1;
+        let count = 5;
 
         for x in 0..count {
             for y in 0..count {
