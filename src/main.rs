@@ -22,8 +22,8 @@
 
 use fart::prelude::*;
 use fart::shape;
-// use fart::fart_2d_geom;
-// use fart::euclid;
+use fart::euclid::{point2, UnknownUnit};
+use fart::fart_2d_geom::Polygon;
 
 fn main() {
     fart::generate(|cfg| {
@@ -42,19 +42,22 @@ fn main() {
                 let v = if count <= 1 { 0.5 } else { y as f64 / (count as f64 - 1.0) };
                 // (x_dist.sample(u), y_dist.sample(v)))
 
+                // let triangle: Polygon<i32, UnknownUnit> = Polygon::new(vec![
+                //     point2(x_dist.sample(cfg.rng()), y_dist.sample(cfg.rng())),
+                //     point2(x_dist.sample(cfg.rng()), y_dist.sample(cfg.rng())),
+                //     point2(x_dist.sample(cfg.rng()), y_dist.sample(cfg.rng())),
+                // ]);
+
                 // scene.add(shape::Shape {
                 //     a: point2(x_dist.sample(cfg.rng()), y_dist.sample(cfg.rng())),
                 //     b: point2(x_dist.sample(cfg.rng()), y_dist.sample(cfg.rng())),
                 //     // b: 3, 4,
                 // });
+                // scene.add(triangle);
                 scene.add(shape::Triangle {
-                    // a: point2(u as i64, v as i64),
                     a: point2(u as i64, v as i64),
-                    b: point2(u as i64, v as i64),
-                    c: point2(u as i64, v as i64),
-                    // a: point2(x_dist.sample(cfg.rng()), y_dist.sample(cfg.rng())),
-                    // b: point2(x_dist.sample(cfg.rng()), y_dist.sample(cfg.rng())),
-                    // c: point2(x_dist.sample(cfg.rng()), y_dist.sample(cfg.rng())),
+                    b: point2(x_dist.sample(cfg.rng()), y_dist.sample(cfg.rng())),
+                    c: point2(x_dist.sample(cfg.rng()), y_dist.sample(cfg.rng())),
                 });
             }
         }
