@@ -22,6 +22,8 @@
 
 use fart::prelude::*;
 use fart::shape;
+use fart::fart_2d_geom;
+use fart::euclid;
 
 fn main() {
     fart::generate(|cfg| {
@@ -33,14 +35,26 @@ fn main() {
         let count = 40;
 
         for x in 0..count {
-            println!("{}", x); // x: i32
+            for y in 0..count {
+                println!("{}", x); // x: i32
+                // let result = if a > b { a } else { b };
+                let u = if count <= 1 { 0.5 } else { x as f64 / (count as f64 - 1.0) };
+                let v = if count <= 1 { 0.5 } else { y as f64 / (count as f64 - 1.0) };
+                // (x_dist.sample(u), y_dist.sample(v)))
+
+                // scene.add(shape::Shape {
+                //     a: point2(x_dist.sample(cfg.rng()), y_dist.sample(cfg.rng())),
+                //     b: point2(x_dist.sample(cfg.rng()), y_dist.sample(cfg.rng())),
+                //     // b: 3, 4,
+                // });
+                scene.add(shape::Triangle {
+                    a: point2(x_dist.sample(cfg.rng()), y_dist.sample(cfg.rng())),
+                    b: point2(x_dist.sample(cfg.rng()), y_dist.sample(cfg.rng())),
+                    c: point2(x_dist.sample(cfg.rng()), y_dist.sample(cfg.rng())),
+                });
+            }
         }
 
-        // scene.add(shape::Triangle {
-        //     a: point2(x_dist.sample(cfg.rng()), y_dist.sample(cfg.rng())),
-        //     b: point2(x_dist.sample(cfg.rng()), y_dist.sample(cfg.rng())),
-        //     c: point2(x_dist.sample(cfg.rng()), y_dist.sample(cfg.rng())),
-        // });
 
 
 
