@@ -36,7 +36,7 @@ fn main() {
 
         for x in 0..count {
             for y in 0..count {
-                println!("{}", x); // x: i32
+                // println!("{}", x); // x: i32
                 // let result = if a > b { a } else { b };
                 let u = if count <= 1 { 0.5 } else { x as f64 / (count as f64 - 1.0) };
                 let v = if count <= 1 { 0.5 } else { y as f64 / (count as f64 - 1.0) };
@@ -54,9 +54,6 @@ fn main() {
                 });
             }
         }
-
-
-
 
         Ok(scene.create_svg(Inches(10.0), Inches(10.0)))
     });
