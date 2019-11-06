@@ -38,8 +38,8 @@ fn main() {
             for y in 0..count {
                 // println!("{}", x); // x: i32
                 // let result = if a > b { a } else { b };
-                let u = if count <= 1 { 0.5 } else { x as f64 * (count as f64 - 1.0) };
-                let v = if count <= 1 { 0.5 } else { y as f64 * (count as f64 - 1.0) };
+                let u = { x as f64 * (count as f64 - 1.0) };
+                let v = { y as f64 * (count as f64 - 1.0) };
                 // (x_dist.sample(u), y_dist.sample(v)))
 
                 // let triangle: Polygon<i32, UnknownUnit> = Polygon::new(vec![
