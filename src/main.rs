@@ -22,7 +22,7 @@
 
 use fart::prelude::*;
 use fart::shape;
-use fart::fart_2d_geom;
+// use fart::fart_2d_geom;
 // use fart::euclid;
 
 fn main() {
